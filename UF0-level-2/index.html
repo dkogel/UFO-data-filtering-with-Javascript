@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+</head>
+    <meta charset="UTF-8">
+    <title>UFO Sightings</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/slate/bootstrap.min.css">
+    <link rel="stylesheet" href="static/style.css">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+<body>
+
+    <div class="hero text-center">
+        <h1>Seeking Truth</h1>
+    </div>
+    <div class = "container-fluid">
+        <div class= "row">
+             <form id="form1">
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <h3 class="top-bottom-50">Filter Search</h3>
+                        <div class="mb-3">
+                            <label class="form-label">Date</label>
+                            <input type="text" class="form-control" id="datetime" placeholder="01/01/2021">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">City</label>
+                            <input type="text" id="city" class="form-control" placeholder="benton">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">State</label>
+                            <input type="text" id="state1" class="form-control" placeholder="ar">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Country</label>
+                            <input type="text" id="country1" class="form-control" placeholder="us">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Shape</label>
+                            <input type="text" id="shape1" class="form-control" placeholder="circle">
+                        </div>
+                        <div>
+                            <button type="button" id="filter-btn" class="btn btn-default top-bottom-50">
+                                Apply Filters
+                            </button>
+                        </div>
+                </div>
+            </form>
+            
+            <div class= col-md-8>
+                <table class="table top-bottom-50">
+                    <thead>
+                    <tr>
+                        <th scope="col">Date</th>
+                        <th scope="col">City</th>
+                        <th scope="col">State</th>
+                        <th scope="col">Country</th>
+                        <th scope="col">Shape</th>
+                        <th scope="col">Duration</th>
+                        <th scope="col">Comments</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </div>            
+        </div>
+    </div>
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="static/js/data.js"></script>
+    <script src="static/js/app.js"></script>
+
+</body>
+
+
+
+</html>
