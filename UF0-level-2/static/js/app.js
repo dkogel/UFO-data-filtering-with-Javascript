@@ -1,18 +1,18 @@
 // from data.js
+
 let tableData = data;
 
 
 // D3 selections
+
 let tbody = d3.select("tbody");
-
 let filterbutton = d3.select("#filter-btn");
-
 let resetButton = d3.select("#reset-btn")
-
 let form = d3.select("#form1");
 
 
 //iniatialize the table
+
 tableData.forEach(function(sightings)
 {
     let row = tbody.append("tr");
@@ -22,20 +22,22 @@ tableData.forEach(function(sightings)
         cell.text(value);
     }
     );
-
 }
 );
 
-//event handlers
+//event listeners
+
 filterbutton.on("click", runFilter);
 resetButton.on("click", runReset);
 form.on("submit", runFilter);
+
+//create function to clear out all filters when reset button is clicked
 
 function runReset(){
 
     d3.event.preventDefault();
 
-    //iniatialize the table
+    //reset the table
     tableData.forEach(function(sightings)
     {
         let row = tbody.append("tr");
@@ -50,9 +52,10 @@ function runReset(){
     );
     
     // clear input fields
-    document.querySelector("form").reset();
-    
+    document.querySelector("form").reset(); 
 }
+
+//create filtering function
 
 function runFilter() {
     d3.event.preventDefault();
@@ -77,31 +80,20 @@ function runFilter() {
     console.log(countryInput)
     console.log(shapeInput)
 
-
-    
-
     //clear table
     tbody.selectAll("tr").remove()
 
     //reset filteredData
     let filteredData = tableData
 
-    //filter data
-    
-    
-    // filteredData = filteredData.filter(o => o.city == cityInput);
-    // filteredData = filteredData.filter(o => o.state == stateInput);
-    // filteredData = filteredData.filter(o => o.country == countryInput);
-    // filteredData = filteredData.filter(o => o.shape == shapeInput);
-
-   switch(dateInput) {
+    //filter data based on form input 
+    switch(dateInput) {
         case "":
            console.log("no date selected");
         break;
         default:
             filteredData = filteredData.filter(o => o.datetime == dateInput);
    }
-
 
     switch(cityInput) {
         case "":
@@ -110,7 +102,6 @@ function runFilter() {
         default:
             filteredData = filteredData.filter(o => o.city == cityInput);
     } 
-
 
     switch(stateInput) {
         case "":
@@ -128,7 +119,6 @@ function runFilter() {
             filteredData = filteredData.filter( o => o.country == countryInput);
     }
 
-
     switch(shapeInput){
         case "":
             console.log("no shape selected");
@@ -136,8 +126,6 @@ function runFilter() {
         default:
             filteredData = filteredData.filter( o => o.shape == shapeInput);
     }
-   
-
 
     //add filtered data back to table
     filteredData.forEach(function(sightings)
