@@ -6,7 +6,7 @@ as an event listener. Using a sample dataset of UFO sightings in the form of a J
 
 https://dkogel.github.io/javascript-challenge/
 
-*Note: please enter filter criteria you can see displayed in the table, as it's a fairly small set. Failing to do so won't create any error, but your're likely to filter out all of the data and simply get an empyt table*
+*Note: please enter filter criteria you can see displayed in the table, as it's a fairly small dataset. Failing to do so won't create any errors, but you're likely to filter out all of the data and simply get an empty table*
 
 
   
