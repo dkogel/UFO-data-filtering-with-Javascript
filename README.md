@@ -1,4 +1,4 @@
-# javascript-challenge
+# UFO data filtering with Javascript
 The purpose of this challenge was to practice working with Javascript and using D3.js
 as an event listener. Using a sample dataset of UFO sightings in the form of a JSON, I created a website with a table of sightings that can be filtered by any or all columns based on user input from a form. 
 
