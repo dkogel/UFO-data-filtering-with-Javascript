@@ -4,7 +4,7 @@ as an event listener. Using a sample dataset of UFO sightings in the form of a J
 
 #### To try out the website, please use the link below and us the form to filter the table
 
-https://dkogel.github.io/javascript-challenge/
+https://dkogel.github.io/UFO-data-filtering-with-Javascript/
 
 *Note: please enter filter criteria you can see displayed in the table, as it's a fairly small dataset. Failing to do so won't create any errors, but you're likely to filter out all of the data and simply get an empty table*
 
